@@ -16,6 +16,7 @@
 
             <link rel="stylesheet" href="{% static 'page.css' %}">
 
+
         <!-- Swiper CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -35,7 +36,7 @@
     </head>
 
     <body>
-           
+
         <nav class="nav">
             <div class="nav-logo">
                 <img src="{% static 'company_logo.png' %}" alt="Company Logo">
@@ -117,12 +118,12 @@
                                             <img src="{% static 'mobile.jpeg' %}" alt="" />
                                     <h3>Mobile App Development</h3>
                                 </div>
-                            </div>    
+                            </div>
                             <div class="flip-card-back">
                                 <h3>Mobile App Development</h3>
                                 <p>Extensively researched mobile app development for Android, iOS, and wearable technology</p>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                     <div class="flip-card" style="flex: 0 0 30%;">
                         <div class="flip-card-inner">
@@ -130,12 +131,12 @@
                                 <div class="image">
                                <img src="{% static 'soft.jpeg' %}" alt="" />
                                 </div>
-                            </div>    
+                            </div>
                             <div class="flip-card-back">
                                 <h3>Software Development</h3>
                                 <p>Technology-driven, result-oriented software solutions","We develop technology-driven, and result-oriented software solutions for you to gain a competitive edge.</p>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                     <div class="flip-card" style="flex: 0 0 30%;">
                         <div class="flip-card-inner">
@@ -143,19 +144,19 @@
                                 <div class="image">
                                             <img src="{% static 'ai.jpg' %}" alt="" />
                                 </div>
-                            </div>    
+                            </div>
                             <div class="flip-card-back">
                                 <h3>AI/ML Development</h3>
                                 <p>Innovative artificial intelligence and machine learning solutions,Our innovative artificial intelligence and machine learning solutions will bring advancement to your business.</p>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
                 <button type="button" class="button" onclick="window.location.href='/services'">View More</button>
             </div>
         </section>
 
-        <section> 
+        <section>
             <div class="container">
                 <h3 class="main-title" >WHY CHOOSE US</h3>
                 <div class="section-title">
@@ -229,7 +230,7 @@
           </div>
         </div>
 
-        
+
                  <!-- Promo Section "Statistics" -->
         <div class="promo-statistics" style="padding-top: 50px; ">
             <div class="stat-item">
@@ -258,7 +259,7 @@
                     {% for testimonial in testimonials %}
                     <div class="slide1 swiper-slide">
                         <button class="testimonial-button" onclick="window.location.href='{{ testimonial.linkedin }}'">
-                        <img src="{{ testimonial.image.url }}" alt="Customer Profile">
+                            <img class="image" src="{{ testimonial.image.url }}" alt="Customer Profile">
                         </button>
                         <p style="color: #fff;">{{ testimonial.testimonial }}</p>
                         <i class="bx bxs-quote-alt-left quote-icon"></i>
@@ -266,7 +267,7 @@
                             <span class="name">{{ testimonial.name }}</span>
                             <span class="job">{{ testimonial.job }}</span>
                         </div>
-                    </div>            
+                    </div>
                     {% endfor %}
                 </div>
                 <div class="swiper-button-next nav-btn"></div>
@@ -274,7 +275,7 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-        
+
         <section>
             <div style="padding-top: 50px;">
                 <h3 class="main-title" style="font-weight: bold;">OUR CLIENTS</h3>
@@ -327,7 +328,7 @@
                 </div>
             </div>
         </section>
-        
+
 
         <footer>
             <div id="footer" class="footer-content">
@@ -337,7 +338,7 @@
                     <img src="{% static 'emplo.png' %}" alt="Logo" class="company-logo" style="width: 150px; height: auto;">
                     </a>
                     <p class="slogan" style="margin-bottom: 140px; margin-left:-45px;">Script. Sculpt. Socialize!</p>
-                    
+
                     <div class="header-links">
                         <h3 style= "color: #3E8EDE; font-size: 25px; font-weight: bold;">LINKS</h3>
                         <h3 style="color: white; font-size: 15px; font-weight: bold;"><a href="#" style="color: inherit; text-decoration: none;">HOME</a></h3>
@@ -347,7 +348,7 @@
                         <h3 style= "color: white; font-size: 15px; font-weight: bold;"><a href="#footer" style="color: inherit; text-decoration: none;">CONTACT</a></h3>
                         <li><a onclick="window.location.href='/carrer'" class="link" style="font-size: 20px; font-weight: bold;">Join Us</a></li>
                     </div>
-                    
+
                     <!-- Social media icons -->
             <ul class="social-icons">
                 <li><a href="https://www.facebook.com/share/togajFtqxTBofCCP/?mibextid=qi2Omg" target="_blank"><img src="{% static 'fb.png' %}" alt="Facebook"></a></li>
@@ -376,7 +377,7 @@
                 <a href="#" class="terms-link" style= "color: #3E8EDE; font-size: 15px;">Terms & Conditions</a>
             </div>
         </footer>
-        
+
 
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -396,7 +397,7 @@
                     duration: 2500,
                     delay: 200
                 });
-            
+
                 // Reveal elements with specified classes
                 ScrollReveal().reveal('.main-title, .section-title, .headline', { delay: 200, origin:'left' });
                 ScrollReveal().reveal('.sec-01 .image, .info, .container, .form-overlay', { delay: 300, origin:'right' });
@@ -405,12 +406,12 @@
                 ScrollReveal().reveal('.sec-02 .image, .sec-03 .image, .get-in-touch-container img', { delay: 200, origin:'top' });
                 ScrollReveal().reveal('.media-info li,  .promo-statistics .stat-item', { delay: 200, origin:'left', interval: 200 });
             });
-            
+
             // Error logging for ScrollReveal initialization
             window.addEventListener('scrollRevealError', function(event) {
                 console.error('ScrollReveal error:', event.detail);
             });
-                
+
 
 
             $(document).ready(function(){
@@ -421,21 +422,21 @@
                     autoplaySpeed: 3000 // Autoplay speed in milliseconds (ms)
                     // Add more options as needed
                 });
-        
+
                 // Initialize Slick carousel for services slide
                 $('#services-slide').slick({
                     dots: false, // No dots for this slide
                     autoplay: true,
                     autoplaySpeed: 3000
                 });
-        
+
                 // Initialize Slick carousel for expertise slide
                 $('#expertise-slide').slick({
                     dots: false, // No dots for this slide
                     autoplay: true,
                     autoplaySpeed: 3000
                 });
-        
+
                 // Initialize Slick carousel for testimonials and blogs slide
                 $('.slide:last-child').slick({
                     dots: false, // No dots for this slide
@@ -447,7 +448,7 @@
 
 
 
-        
+
          // Open social media links in new tabs
         document.querySelectorAll('.social-icons a').forEach(function(link) {
             link.addEventListener('click', function(event) {
@@ -457,7 +458,7 @@
         });
         </script>
 
-        
-            
+
+
     </body>
 </html>
